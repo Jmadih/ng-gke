@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "ng-gke"
+  "defaultProject": "ng-gke",
+  "cli": {
+    "analytics": "39230ba1-46ca-4fe0-93c4-38ce1e8e5fd7"
+  }
 }

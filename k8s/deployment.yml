@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ng-gke-deploy
+  labels:
+    app: ng-gke
+    stack: frontend
+spec :
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ng-gke
+  template:
+    metadata:
+      labels:
+        app: ng-gke
+    spec:
+      containers:
+        - name: ng-gke
+          image: "eu.gcr.io/poc-jma/ng-gke:1.0"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
